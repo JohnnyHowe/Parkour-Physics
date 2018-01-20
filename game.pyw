@@ -12,7 +12,7 @@ screenX = 1000
 pg.init()
 window = pg.display.set_mode((windowX, windowY))
 clock = pg.time.Clock()
-pg.display.set_caption('Just some pakoor stuff')
+pg.display.set_caption('')
 
 
 def makeObject(x, y, x2, y2, img, path):  #if "img" = True, "path" must be img path. If "img" = False, path must be rgb   
@@ -64,6 +64,8 @@ def eventLoop():
         if event.type == pg.KEYDOWN:
             if event.key == pg.K_ESCAPE:
                 quit()
+        if event.type == pg.QUIT:
+            quit()
                 
 
 from player import *
